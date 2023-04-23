@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+ 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          
+          <h1 style="color:Tomato;">Nikki's Kitchen</h1>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+         
+        </div>
+      </nav>
+  <main>
+    <div class="container">
+        <div class="row">
+           <div class="col-sm-6">
+            <br>
+               <img src="../Java Script/Images/thali.jpg" class="img-fluid" image alli>
+           </div> 
+           <div class="col-sm-6">
+            <div class="mb-3">
+              <br>
+              <select class="form-select" aria-label="Default select example" id="dish">
+                <option selected>Open this select menu</option>
+                <option value="Gujarati">Gujarati Dish</option>
+                <option value="Punjabi">Punjabi Dish</option>
+                <option value="South">South Indian Dish</option>
+              </select>
+            </div> 
+            <div class="mb-3">
+              <input type="text"
+                class="form-control" name="" id="qty" aria-describedby="helpId" placeholder="Enter Qnt">
+              </div>
+              <div class="mb-3">
+                <input type="text"
+                  class="form-control" name="" id="code" aria-describedby="helpId" placeholder="Enter Code">
+                </div>
+                <br>
+                <button type="button" class="btn btn-outline-primary" onclick="orderData()">Order Now</button> 
+              <br>
+              <br>
+                <span id="bill"></span>
+               
+        </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+<br>
+<div class="coupon">
+  <div class="container">
+    <h3>Apply Coupon</h3>
+  </div>
+  <div class="container" style="background-color:white">
+    <h2><b>20% OFF YOUR ORDER</b></h2> 
+  </div>
+  <div class="container">
+    <p>Use Promo Code: <span class="promo"><b>5STAR</span></p></b>
+    <p class="expire" style="color:red;">Expires: June 03, 2023</p>
+  </div>
+</div>
+</html>
+<script>
+    function orderData()
+    {
+        var dish1=document.getElementById("dish").value
+        var qty=parseInt(document.getElementById("qty").value)
+        var code=document.getElementById("code").value
+        var price1=400
+        var price2=500
+        var price3=550
+       
+  if ((code == "5STAR") && (dish1=="Gujarati")) 
+  {
+    document.getElementById("bill").innerHTML="your Total bill is" +" " + (price1-80*qty)
+  } 
+  if ((code == "5STAR") && (dish1=="Punjabi")) 
+  {
+    document.getElementById("bill").innerHTML="your Total bill is" +" " + (price2-80*qty)
+  } 
+  if ((code == "5STAR") && (dish1=="South")) 
+  {
+    document.getElementById("bill").innerHTML="your Total bill is" +" " + (price3-80*qty)
+  }  
+ if(code.length < 1 && dish1=="Gujarati" ) 
+      {
+      document.getElementById("bill").innerHTML="your Total bill is" +" " + (price1*qty)
+      } 
+  if(code.length < 1 && dish1=="Punjabi"|| code=="undefined") 
+      {
+      document.getElementById("bill").innerHTML="your Total bill is" +" " + (price2*qty)
+      } 
+  if(code.length < 1 && dish1=="South"|| code=="undefined") 
+      {
+      document.getElementById("bill").innerHTML="your Total bill is" +" " + (price3*qty)
+      }    
+ 
+    }
+
+   
+    
+    
+ 
+   
+</script>

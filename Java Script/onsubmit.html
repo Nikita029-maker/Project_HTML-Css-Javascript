@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="demo()">
+        <input type="text" placeholder="name"  id="name"> 
+        <input type="text" placeholder="lname"  id="lname">
+
+        <input type="text" placeholder="course"  id="course"> 
+
+        <input type="submit">
+
+    </form>
+    
+</body>
+</html> 
+
+<script>
+    function demo()
+    {
+        var name=document.getElementById("name").value
+        var surname=document.getElementById("lname").value
+        var course=document.getElementById("course").value
+        event.preventDefault();
+        console.log("Hello... " + name+" "+surname+" " +course)
+    }
+</script>

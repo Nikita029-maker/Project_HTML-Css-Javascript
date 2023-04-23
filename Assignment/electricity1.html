@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="type" name="cusid" placeholder="Enter your ID" id="id">
+    <input type="type" name="name" placeholder="Enter your name" id="name">
+    <input type="type" name="units" placeholder="Enter your Units" id="units">
+    <button onclick="submit()">Submit</button>
+
+</body>
+</html>
+<script>
+    function submit()
+    {
+        var cusid=document.getElementById("id").value
+        var name=document.getElementById("name").value
+        var units=document.getElementById("units").value
+        var bill=0
+
+        if(units<200)
+        {
+                 bill=units*1.20
+        }
+        else if (units>=200 && units<400) 
+        
+        {
+            bill=units*1.50
+        }
+        else if (units>=400 && units<600)
+        {
+         bill=units*1.80
+        }
+        else if(units>=600)
+        {
+         bill=units*2
+       }
+    bill=bill+100;
+    if(bill>400)
+    {
+        bill=bill+0.15*bill;
+
+    }
+    document.write(cusid +"_" + name +" "+"your Total bill is" +" :" +" " + bill)
+    }
+</script>

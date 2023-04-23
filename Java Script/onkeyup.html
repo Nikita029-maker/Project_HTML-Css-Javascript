@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="type" placeholder="name" onkeyup="demo(this)">
+    <span id="namedata" style="color: blue;"></span>
+    <input type="type" placeholder="name1" onkeydown="demo1(this)">
+    <span id="namedata1" style="color:brown"></span> 
+    <input type="type" placeholder="name2" onchange="demo2(this)">
+    <span id="namedata2" style="color:rgb(165, 42, 42)"></span> 
+    <input type="type" id="name3" onmouseenter="demo3()">
+</body>
+</html>
+<script>
+    function demo(e)
+    {
+        document.getElementById("namedata").innerHTML=e.value   
+    }
+    function demo1(e)
+    {
+        document.getElementById("namedata1").innerHTML=e.value
+    }
+    function demo2(e)
+    {
+        document.getElementById("namedata2").innerHTML=e.value
+    }
+    function demo3()
+    {
+        alert("Hello All")
+    }
+    //onkeyup is use for change color
+//     <!-- onclick 
+// onkeyup all character show
+// onkeydown last character now show in result
+// onchange after click out side then show result
+// ondblclick
+
+// onblur 
+// onsubmit
+// -->
+</script>
