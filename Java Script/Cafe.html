@@ -161,10 +161,10 @@
      }
      function getresult()
     {
-       var total=document.getElementById("bill").value
-       var total1=document.getElementById("bill1").value
-       var total2=document.getElementById("bill2").value
-  document.getElementById("result").innerHTML="Your Total Bill Amount Is:"+total+total1+total2;
+       var total=parseInt(document.getElementById("bill").innerHTML)
+       var total1=parseInt(document.getElementById("bill1").innerHTML)
+       var total2=parseInt(document.getElementById("bill2").innerHTML)
+  document.getElementById("result").innerHTML="Your Total Bill Amount Is:"+(total+total1+total2);
      
        
     }
